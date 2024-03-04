@@ -1,0 +1,26 @@
+ //*******************4Q missing number in the vector*********
+
+
+//description ---->>we have vector and we have to find the missing number in the vector.
+
+
+//code----->>>
+//using sort function
+#include<iostream>
+#include<algorithm>
+#include<vector>
+using namespace std;
+int main(){
+  vector<int>a={0,2,5,3,6,1,4,7,9};
+  int size=a.size();
+  sort(a.begin(),a.end());
+  for(int i=0,count=0;i<size;i++,count++){
+    if(a[i]!=count){
+      cout<<"missing element is"<<count<<endl;
+      i--;
+      
+    }
+    
+  }
+  return 0;
+}
